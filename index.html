@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Montage Solutions LLC — Trusted government contracting partner for facilities support, operations, and project management. Serving federal agencies and local governments." />
+  <title>Montage Solutions LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --azure: #207fc9;
+      --dark-blue: #0c2659;
+      --azure-light: #e8f3fb;
+      --azure-mid: #1570b3;
+      --dark-blue-deep: #081a3d;
+      --white: #ffffff;
+      --gray-50: #f8f9fb;
+      --gray-100: #f1f3f6;
+      --gray-200: #e2e6ed;
+      --gray-400: #94a3b8;
+      --gray-600: #4b5e7a;
+      --gray-800: #1e2d42;
+      --text: #0f1c2e;
+      --text-muted: #4b5e7a;
+      --radius: 8px;
+      --radius-lg: 12px;
+      --shadow: 0 2px 12px rgba(12,38,89,0.08);
+      --shadow-md: 0 4px 24px rgba(12,38,89,0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(12, 38, 89, 0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(32,127,201,0.2);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+      text-decoration: none;
+    }
+
+    .nav-logo-name {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.01em;
+    }
+
+    .nav-logo-sub {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--azure);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--azure); }
+
+    .nav-cta {
+      background: var(--azure) !important;
+      color: var(--white) !important;
+      padding: 8px 20px;
+      border-radius: var(--radius);
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--azure-mid) !important; color: var(--white) !important; }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ── HERO ── */
+    #home {
+      min-height: 100vh;
+      background: linear-gradient(160deg, var(--dark-blue-deep) 0%, var(--dark-blue) 50%, #0e3070 100%);
+      display: flex;
+      align-items: center;
+      padding: 120px 2rem 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #home::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(32,127,201,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    #home::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(32,127,201,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(32,127,201,0.15);
+      border: 1px solid rgba(32,127,201,0.3);
+      color: var(--azure);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--azure);
+      border-radius: 50%;
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      max-width: 760px;
+    }
+
+    .hero-title span { color: var(--azure); }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.72);
+      max-width: 580px;
+      margin-bottom: 2.5rem;
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--azure);
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover { background: var(--azure-mid); transform: translateY(-1px); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 500;
+      padding: 13px 28px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.3);
+      transition: border-color 0.2s, background 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover { border-color: var(--azure); background: rgba(32,127,201,0.1); }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .hero-stat-num {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      margin-top: 4px;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 96px 2rem; }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--azure);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--dark-blue);
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      line-height: 1.8;
+    }
+
+    .section-header { margin-bottom: 3.5rem; }
+
+    /* ── ABOUT ── */
+    #about { background: var(--gray-50); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-values {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .about-value {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .about-value-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius);
+      background: var(--azure-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .about-value-icon svg { width: 20px; height: 20px; stroke: var(--azure); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    .about-value-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      margin-bottom: 3px;
+    }
+
+    .about-value-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .about-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-card-header {
+      background: var(--dark-blue);
+      padding: 2rem;
+      color: var(--white);
+    }
+
+    .about-card-header h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .about-card-header p {
+      font-size: 13px;
+      color: var(--azure);
+      font-weight: 500;
+    }
+
+    .about-card-body {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .about-card-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--gray-100);
+      font-size: 14px;
+    }
+
+    .about-card-row:last-child { border-bottom: none; }
+
+    .about-card-row-label { color: var(--text-muted); font-weight: 500; }
+
+    .about-card-row-value {
+      color: var(--dark-blue);
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .badge-pending {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--azure-mid);
+      background: var(--azure-light);
+      border-radius: 100px;
+      padding: 2px 10px;
+    }
+
+    /* ── SERVICES ── */
+    #services { background: var(--white); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+
+    .service-card:hover {
+      border-color: var(--azure);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius);
+      background: var(--azure-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-icon svg { width: 24px; height: 24px; stroke: var(--azure); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+    .service-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark-blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ── CAPABILITIES ── */
+    #capabilities { background: var(--dark-blue); }
+
+    #capabilities .section-title { color: var(--white); }
+    #capabilities .section-lead { color: rgba(255,255,255,0.65); }
+
+    .cap-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 3.5rem;
+    }
+
+    .cap-naics { }
+
+    .cap-naics-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--azure);
+      margin-bottom: 1.25rem;
+    }
+
+    .naics-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .naics-table tr {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .naics-table tr:last-child { border-bottom: none; }
+
+    .naics-table td {
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    .naics-code {
+      color: var(--azure);
+      font-weight: 700;
+      font-family: 'Courier New', monospace;
+      letter-spacing: 0.04em;
+      width: 80px;
+    }
+
+    .naics-desc { color: rgba(255,255,255,0.8); }
+
+    .cap-diffs { }
+
+    .cap-diffs-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--azure);
+      margin-bottom: 1.25rem;
+    }
+
+    .diff-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .diff-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .diff-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--azure);
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    .diff-item-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 3px;
+    }
+
+    .diff-item-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.65;
+    }
+
+    /* ── PAST PERFORMANCE ── */
+    #performance { background: var(--gray-50); }
+
+    .perf-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .perf-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-left: 4px solid var(--azure);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: center;
+      transition: box-shadow 0.2s;
+    }
+
+    .perf-card:hover { box-shadow: var(--shadow); }
+
+    .perf-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark-blue);
+      margin-bottom: 4px;
+    }
+
+    .perf-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .perf-value {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .perf-value-num {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--azure);
+      white-space: nowrap;
+    }
+
+    .perf-value-label {
+      font-size: 11px;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 2px;
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--white); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-info { }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .contact-info-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius);
+      background: var(--azure-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-info-icon svg { width: 20px; height: 20px; stroke: var(--azure); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    .contact-info-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-400);
+      margin-bottom: 3px;
+    }
+
+    .contact-info-value {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--dark-blue);
+      text-decoration: none;
+    }
+
+    .contact-info-value:hover { color: var(--azure); }
+
+    .contact-form {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+    }
+
+    .form-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--dark-blue);
+      margin-bottom: 1.75rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gray-600);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--azure);
+      box-shadow: 0 0 0 3px rgba(32,127,201,0.12);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-submit {
+      width: 100%;
+      margin-top: 0.5rem;
+      justify-content: center;
+      font-size: 15px;
+    }
+
+    .form-note {
+      font-size: 12px;
+      color: var(--gray-400);
+      text-align: center;
+      margin-top: 0.75rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark-blue-deep);
+      padding: 3rem 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-logo-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .footer-logo-sub {
+      font-size: 11px;
+      color: var(--azure);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--azure); }
+
+    .footer-copy {
+      font-size: 13px;
+      color: rgba(255,255,255,0.35);
+      width: 100%;
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 1rem;
+    }
+
+    /* ── DIVIDER BAR ── */
+    .divider-bar {
+      height: 4px;
+      background: linear-gradient(90deg, var(--dark-blue), var(--azure), var(--dark-blue));
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: var(--dark-blue); padding: 1.5rem 2rem; gap: 1.25rem; border-top: 1px solid rgba(32,127,201,0.2); }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: flex; }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .cap-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .perf-card { grid-template-columns: 1fr; }
+      .perf-value { text-align: left; }
+      .hero-stats { gap: 1.5rem; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      section { padding: 72px 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <span class="nav-logo-name">Montage Solutions LLC</span>
+      <span class="nav-logo-sub">Government Contracting</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#performance">Past Performance</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Woman-Owned Small Business</div>
+    <h1 class="hero-title">
+      Trusted Government<br>Contracting <span>Partner</span>
+    </h1>
+    <p class="hero-sub">
+      Montage Solutions LLC delivers reliable facilities support, operations management, and project coordination for federal agencies and local governments — with owner-led accountability on every engagement.
+    </p>
+    <div class="hero-actions">
+      <a href="#services" class="btn-primary">
+        Our Services
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l6-6M11 12V6H5"/></svg>
+      </a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">$7M+</div>
+        <div class="hero-stat-label">Projects managed</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">7</div>
+        <div class="hero-stat-label">NAICS codes</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">5+</div>
+        <div class="hero-stat-label">Industries served</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">WOSB</div>
+        <div class="hero-stat-label">Certification pending</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-bar"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div>
+        <p class="section-eyebrow">About Us</p>
+        <h2 class="section-title">Built for Government. Driven by Results.</h2>
+        <p class="section-lead">
+          Montage Solutions LLC is a New Mexico-based government contracting firm specializing in facilities support services, project management, and operational coordination. We partner with federal agencies and local governments to deliver dependable, professionally managed services — on time and on budget.
+        </p>
+        <p class="section-lead" style="margin-top: 1rem;">
+          Founded by Darie Monahan, Montage Solutions is structured to move quickly, communicate clearly, and execute with precision. Every contract receives direct owner involvement — no account managers, no handoffs, no gaps in accountability.
+        </p>
+        <div class="about-values">
+          <div class="about-value">
+            <div class="about-value-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <div class="about-value-title">Owner-Led Accountability</div>
+              <div class="about-value-desc">Darie Monahan is directly involved in every contract. You always know who is responsible.</div>
+            </div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div>
+              <div class="about-value-title">Rapid Mobilization</div>
+              <div class="about-value-desc">Our subcontractor network enables fast team assembly across trades and service areas.</div>
+            </div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <div class="about-value-title">Proven Subcontractor Network</div>
+              <div class="about-value-desc">Qualified, insured local subcontractors ready to perform across multiple service lines.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="about-card">
+          <div class="about-card-header">
+            <h3>Darie Monahan</h3>
+            <p>Owner &amp; Manager</p>
+          </div>
+          <div class="about-card-body">
+            <div class="about-card-row">
+              <span class="about-card-row-label">Entity Type</span>
+              <span class="about-card-row-value">LLC — Manager-Managed</span>
+            </div>
+            <div class="about-card-row">
+              <span class="about-card-row-label">State of Formation</span>
+              <span class="about-card-row-value">New Mexico</span>
+            </div>
+            <div class="about-card-row">
+              <span class="about-card-row-label">Business Type</span>
+              <span class="about-card-row-value">Small Business</span>
+            </div>
+            <div class="about-card-row">
+              <span class="about-card-row-label">WOSB Status</span>
+              <span class="about-card-row-value"><span class="badge-pending">Certification Pending</span></span>
+            </div>
+            <div class="about-card-row">
+              <span class="about-card-row-label">SAM.gov</span>
+              <span class="about-card-row-value"><span class="badge-pending">Registration Pending</span></span>
+            </div>
+            <div class="about-card-row">
+              <span class="about-card-row-label">OSHA</span>
+              <span class="about-card-row-value">OSHA 10 Certified</span>
+            </div>
+            <div class="about-card-row">
+              <span class="about-card-row-label">Primary Markets</span>
+              <span class="about-card-row-value">Federal &amp; Local Gov</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-eyebrow">What We Do</p>
+      <h2 class="section-title">Core Service Lines</h2>
+      <p class="section-lead">We deliver a focused range of facilities and operational services designed for government contract performance — reliably coordinated and professionally managed.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="service-title">Facilities Support Services</div>
+        <div class="service-desc">Comprehensive facilities management and support services for government buildings, campuses, and installations — coordinated end-to-end.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="service-title">Janitorial Services</div>
+        <div class="service-desc">Recurring and one-time commercial and government facility cleaning services, coordinated with qualified, vetted service providers.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22V12"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/><path d="M12 2a5 5 0 0 1 5 5c0 3-5 7-5 7s-5-4-5-7a5 5 0 0 1 5-5z"/></svg>
+        </div>
+        <div class="service-title">Landscaping Services</div>
+        <div class="service-desc">Grounds maintenance, landscaping installation, seasonal cleanup, and turf management for government facilities and properties.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+        </div>
+        <div class="service-title">Property Cleanup &amp; Debris Removal</div>
+        <div class="service-desc">Site cleanup, debris hauling, and waste removal services for residential, commercial, and government properties — fully coordinated and insured.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+        </div>
+        <div class="service-title">Building Maintenance Coordination</div>
+        <div class="service-desc">Oversight and coordination of preventive and corrective building maintenance activities, vendor scheduling, and work order management.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div class="service-title">Administrative Support Services</div>
+        <div class="service-desc">Program support, reporting, scheduling, records management, and administrative coordination in support of government contracts and operations.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section id="capabilities">
+  <div class="section-inner">
+    <p class="section-eyebrow">Capabilities</p>
+    <h2 class="section-title">NAICS Codes &amp; Differentiators</h2>
+    <p class="section-lead">Registered to compete across multiple service categories relevant to federal and local government procurement.</p>
+    <div class="cap-grid">
+      <div class="cap-naics">
+        <div class="cap-naics-title">NAICS Codes</div>
+        <table class="naics-table">
+          <tr><td class="naics-code">561210</td><td class="naics-desc">Facilities Support Services</td></tr>
+          <tr><td class="naics-code">561720</td><td class="naics-desc">Building Cleaning Services</td></tr>
+          <tr><td class="naics-code">561730</td><td class="naics-desc">Landscaping Services</td></tr>
+          <tr><td class="naics-code">561790</td><td class="naics-desc">Other Services to Buildings &amp; Dwellings</td></tr>
+          <tr><td class="naics-code">562119</td><td class="naics-desc">Other Waste Collection</td></tr>
+          <tr><td class="naics-code">561110</td><td class="naics-desc">Office Administrative Services</td></tr>
+          <tr><td class="naics-code">541611</td><td class="naics-desc">Management Consulting Services</td></tr>
+        </table>
+      </div>
+      <div class="cap-diffs">
+        <div class="cap-diffs-title">Why Montage Solutions</div>
+        <div class="diff-list">
+          <div class="diff-item">
+            <div class="diff-dot"></div>
+            <div>
+              <div class="diff-item-title">Owner-Led on Every Contract</div>
+              <div class="diff-item-desc">Direct involvement from Darie Monahan on every engagement — no layers of management between you and the decision-maker.</div>
+            </div>
+          </div>
+          <div class="diff-item">
+            <div class="diff-dot"></div>
+            <div>
+              <div class="diff-item-title">Agile Small Business Advantage</div>
+              <div class="diff-item-desc">Fast mobilization, lean overhead, and the flexibility to adapt quickly — without the bureaucracy of a large prime contractor.</div>
+            </div>
+          </div>
+          <div class="diff-item">
+            <div class="diff-dot"></div>
+            <div>
+              <div class="diff-item-title">Established Subcontractor Network</div>
+              <div class="diff-item-desc">Deep relationships with qualified, insured local subcontractors across multiple trades — ready to perform when you need them.</div>
+            </div>
+          </div>
+          <div class="diff-item">
+            <div class="diff-dot"></div>
+            <div>
+              <div class="diff-item-title">Multi-Sector Project Experience</div>
+              <div class="diff-item-desc">Proven track record managing complex projects up to $7M across government, healthcare, higher education, and commercial sectors.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAST PERFORMANCE -->
+<section id="performance">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-eyebrow">Past Performance</p>
+      <h2 class="section-title">Proven Track Record</h2>
+      <p class="section-lead">Our leadership team brings direct experience managing complex, multi-stakeholder projects across government and commercial sectors.</p>
+    </div>
+    <div class="perf-grid">
+
+      <div class="perf-card">
+        <div>
+          <div class="perf-title">Regional Infrastructure &amp; Roadway Projects</div>
+          <div class="perf-desc">Program management of DOT, county, and municipal roadway, park design, solar, EV charging, and outdoor lighting projects across multiple states.</div>
+        </div>
+        <div class="perf-value">
+          <div class="perf-value-num">Up to $5M</div>
+          <div class="perf-value-label">Project value</div>
+        </div>
+      </div>
+
+      <div class="perf-card">
+        <div>
+          <div class="perf-title">Commercial Facilities Maintenance &amp; Cleaning</div>
+          <div class="perf-desc">Managed recurring janitorial and cleaning service contracts for residential and commercial facilities, coordinating multiple on-site service providers simultaneously.</div>
+        </div>
+        <div class="perf-value">
+          <div class="perf-value-num">Multi-Site</div>
+          <div class="perf-value-label">Coordination</div>
+        </div>
+      </div>
+
+      <div class="perf-card">
+        <div>
+          <div class="perf-title">Site Cleanup, Moving &amp; Debris Removal</div>
+          <div class="perf-desc">Directed residential and commercial site cleanup, moving, and waste removal operations across multiple performance periods.</div>
+        </div>
+        <div class="perf-value">
+          <div class="perf-value-num">Up to $25K</div>
+          <div class="perf-value-label">Contract value</div>
+        </div>
+      </div>
+
+      <div class="perf-card">
+        <div>
+          <div class="perf-title">Commercial Interior Construction (Millwork)</div>
+          <div class="perf-desc">Managed large-scale millwork and interior construction projects for hospitals, universities, and corporate clients — full project lifecycle oversight.</div>
+        </div>
+        <div class="perf-value">
+          <div class="perf-value-num">Up to $7M</div>
+          <div class="perf-value-label">Project value</div>
+        </div>
+      </div>
+
+      <div class="perf-card">
+        <div>
+          <div class="perf-title">Electrical Systems — Healthcare &amp; Education</div>
+          <div class="perf-desc">Managed electrical systems projects for hospital and university facilities, coordinating licensed subcontractors to deliver on-time, on-budget performance.</div>
+        </div>
+        <div class="perf-value">
+          <div class="perf-value-num">Up to $3M</div>
+          <div class="perf-value-label">Project value</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-eyebrow">Contact</p>
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="section-lead">Ready to discuss a contract opportunity, teaming arrangement, or subcontracting relationship? Reach out — we respond promptly.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <a href="mailto:info@montagesolutionsllc.com" class="contact-info-value">info@montagesolutionsllc.com</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Phone</div>
+            <a href="tel:8604546653" class="contact-info-value">(860) 454-6653</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Website</div>
+            <a href="https://www.montagesolutionsllc.com" class="contact-info-value">montagesolutionsllc.com</a>
+          </div>
+        </div>
+        <div style="margin-top: 2rem; padding: 1.5rem; background: var(--azure-light); border-radius: var(--radius-lg); border-left: 4px solid var(--azure);">
+          <div style="font-size: 14px; font-weight: 600; color: var(--dark-blue); margin-bottom: 6px;">For contract inquiries:</div>
+          <a href="mailto:contracts@montagesolutionsllc.com" style="font-size: 14px; color: var(--azure); text-decoration: none; font-weight: 500;">contracts@montagesolutionsllc.com</a>
+          <div style="font-size: 14px; font-weight: 600; color: var(--dark-blue); margin-top: 1rem; margin-bottom: 6px;">For proposals &amp; teaming:</div>
+          <a href="mailto:proposals@montagesolutionsllc.com" style="font-size: 14px; color: var(--azure); text-decoration: none; font-weight: 500;">proposals@montagesolutionsllc.com</a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-title">Send Us a Message</div>
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="first_name" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="last_name" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@agency.gov" required />
+          </div>
+          <div class="form-group">
+            <label for="org">Organization / Agency</label>
+            <input type="text" id="org" name="organization" placeholder="Department of ..." />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="">Select a topic...</option>
+              <option>Contract Opportunity</option>
+              <option>Teaming / Partnership</option>
+              <option>Subcontracting</option>
+              <option>Capability Statement Request</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project or opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit">Send Message</button>
+          <p class="form-note">We typically respond within one business day.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-bar"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-name">Montage Solutions LLC</div>
+      <div class="footer-logo-sub">Government Contracting</div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#performance">Past Performance</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 Montage Solutions LLC. All rights reserved. | New Mexico Limited Liability Company</p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+  toggle.addEventListener('click', function() {
+    links.classList.toggle('open');
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      links.classList.remove('open');
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        const offset = 68;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 20) {
+      nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
+    } else {
+      nav.style.boxShadow = 'none';
+    }
+  });
+
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', function(e) {
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+  });
+</script>
+</body>
+</html>
